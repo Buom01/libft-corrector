@@ -25,7 +25,7 @@ do
 	gcc -Wall -Wextra -Werror -I../libft/ $test -o $test.out
 	if [[ -f $test.sh ]]; then
 		./$test.sh
-		printf " (using -.sh)"
+		printf "  \033[0;90m(using -.sh)$RESET"
 	else
 		./$test.out && OK || KO
 	fi
