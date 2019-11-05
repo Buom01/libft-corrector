@@ -25,7 +25,7 @@ do
 	gcc -Wall -Wextra -Werror -I../libft/ $test -o $test.out
 	if [[ -f $test.sh ]]; then
 		./$test.sh
-		print " (using -.sh)"
+		printf " (using -.sh)"
 	else
 		./$test.out && OK || KO
 	fi
