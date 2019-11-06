@@ -30,13 +30,13 @@ printf "\n"
 for test in $TESTFILES
 do
 	printf "$test : "
-	sh -c "gcc -Wall -Wextra -Werror -I $LIBFT_PATH $test -o $test.out" &>/dev/null
+	sh -c "gcc -Wall -Wextra -Werror -I $LIBFT_PATH $test $LIBFT_PATH*.o -o $test.out" &>/dev/null
 	if [[ -f $test.out ]]; then
 		if [[ -f $test.sh ]]; then
 			./$test.sh
 			printf "  \033[0;90m(using -.sh)$RESET"
 		else
-			./$test.out && OK || KO
+			./$test.out &>/dev/null && OK || KO
 		fi
 	else
 		printf "$FAIL DO NOT COMPILE WITH TESTS (Verify your prototype) $RESET"

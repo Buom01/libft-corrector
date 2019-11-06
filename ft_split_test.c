@@ -6,7 +6,7 @@
 /*   By: badam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 22:26:20 by badam             #+#    #+#             */
-/*   Updated: 2019/11/06 15:42:29 by badam            ###   ########.fr       */
+/*   Updated: 2019/11/06 16:22:59 by badam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	main(int argc, char **argv)
 	refrslt = argv + 3;
 	while (rslt && refrslt)
 	{
-		if (strcmp(*(rslt++), *(refrslt++)) != 0)
+		if (strcmp(*(refrslt++), *(rslt++)) != 0)
 			return (1);
 	}
 	if ((rslt && !refrslt) || (!rslt && refrslt))
