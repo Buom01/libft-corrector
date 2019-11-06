@@ -6,12 +6,13 @@
 /*   By: badam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 22:26:20 by badam             #+#    #+#             */
-/*   Updated: 2019/11/06 16:22:59 by badam            ###   ########.fr       */
+/*   Updated: 2019/11/06 20:52:53 by badam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "string.h"
 #include "libft.h"
+#include "unistd.h"
 
 int	main(int argc, char **argv)
 {
@@ -26,11 +27,13 @@ int	main(int argc, char **argv)
 	s = argv[1];
 	rslt = ft_split((const char*)s, (char)c);
 	refrslt = argv + 3;
-	while (rslt && refrslt)
+	while ((rslt && *rslt) && (refrslt && *refrslt))
 	{
 		if (strcmp(*(refrslt++), *(rslt++)) != 0)
 			return (1);
 	}
-	if ((rslt && !refrslt) || (!rslt && refrslt))
+	if (((rslt && *rslt) && !(refrslt && *refrslt))
+			|| (!(rslt && *rslt) && (refrslt && *refrslt)))
 		return (1);
+	return (0);
 }
