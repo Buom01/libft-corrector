@@ -32,7 +32,7 @@ printf "\n"
 for test in $TESTFILES
 do
 	printf "$test : "
-	sh -c "gcc -Wall -Wextra -Werror -I $LIBFT_PATH $test $LIBFT_PATH*.o -o $test.out" &>/dev/null
+	sh -c "gcc -Wall -Wextra -Werror -I $LIBFT_PATH $test $LIBFT_PATH*.o -o $test.out" #&>/dev/null
 	if [[ -f $test.out ]]; then
 		if [[ -f $test.sh ]]; then
 			./$test.sh 2> /dev/null  # Move out errors
