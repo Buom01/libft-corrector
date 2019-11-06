@@ -6,12 +6,12 @@
 /*   By: badam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 21:34:43 by badam             #+#    #+#             */
-/*   Updated: 2019/11/05 21:42:44 by badam            ###   ########.fr       */
+/*   Updated: 2019/11/06 15:47:23 by badam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "stdlib.h"
-#include "ft_atoi.c"
+#include "libft.h"
 
 int	main(int argc, char **argv)
 {
