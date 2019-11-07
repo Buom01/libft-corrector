@@ -6,7 +6,7 @@
 #    By: badam <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/05 22:12:05 by badam             #+#    #+#              #
-#    Updated: 2019/11/06 21:38:23 by badam            ###   ########.fr        #
+#    Updated: 2019/11/07 16:28:44 by badam            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,6 +26,9 @@
 ./ft_strnstr_test.c.out "Ma botte de foin" "in" "14" && OK || KO
 ./ft_strnstr_test.c.out "Ma botte de foin" "in" "15" && OK || KO
 ./ft_strnstr_test.c.out "Ma botte de foin" "in" "16" && OK || KO
+./ft_strnstr_test.c.out "Ma botte de foin" "oin" "14" && OK || KO
+./ft_strnstr_test.c.out "Ma botte de foin" "oin" "15" && OK || KO
+./ft_strnstr_test.c.out "Ma botte de foin" "oin" "16" && OK || KO
 ./ft_strnstr_test.c.out "q" "qqqqq" "16" && OK || KO
 ./ft_strnstr_test.c.out "q" "qwerty" "16" && OK || KO
 ./ft_strnstr_test.c.out "q" "qwerty" "1" && OK || KO
