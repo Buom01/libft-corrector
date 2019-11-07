@@ -33,7 +33,7 @@ sh -c "cd $LIBFT_PATH && make re &>/dev/null" && OK && printf "(Project)  " \
 		|| (KO && exit)
 sh -c "cd $LIBFT_PATH && make bonus &>/dev/null" && OK && printf "(Bonus)" \
 		|| (KO && exit)
-printf "\n"
+printf "\n\n"
 
 for test in $TESTFILES
 do
@@ -55,3 +55,5 @@ done
 printf "\n\n  $FAIL $RESET  : Not working in a way\n\
   $SUCCESS $RESET  : Working at this point\n\
  $SEPARATOR $RESET : Fails after this separator could be mitiged\n"
+
+rm -Rf *.out *.dSYM
