@@ -6,7 +6,7 @@
 #    By: badam <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/05 22:12:05 by badam             #+#    #+#              #
-#    Updated: 2019/11/07 16:28:44 by badam            ###   ########.fr        #
+#    Updated: 2019/11/07 16:34:57 by badam            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,5 +39,4 @@
 ./ft_strnstr_test.c.out "q" "" "1" && OK || KO
 ./ft_strnstr_test.c.out "q" "q" "0" && OK || KO
 ./ft_strnstr_test.c.out "" "" "1" && OK || KO
-./ft_strnstr_test.c.out "q" "" "0" && OK || KO
 ./ft_strnstr_test.c.out "q" "" "0" && OK || KO
