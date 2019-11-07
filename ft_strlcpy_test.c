@@ -6,7 +6,7 @@
 /*   By: badam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/07 17:41:38 by badam             #+#    #+#             */
-/*   Updated: 2019/11/07 17:44:48 by badam            ###   ########.fr       */
+/*   Updated: 2019/11/07 21:15:00 by badam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 #include "unistd.h"
 #include "libft.h"
 
-#define MEMLEN 1024
+#define MEMLEN 256
 
 int	main(int argc, char **argv)
 {
@@ -42,6 +42,7 @@ int	main(int argc, char **argv)
 	ft_strlcpy(	ft_memdst,	argv[2], atoi(argv[3]));
 	strlcpy(	memdst,	argv[2], atoi(argv[3]));
 	diff = memcmp(ft_memdst, memdst, MEMLEN);
+	//printf("\n%s:%s ", ft_memdst, memdst);
 	free(ft_memdst);
 	free(memdst);
 	return (!!diff);
