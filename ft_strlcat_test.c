@@ -6,7 +6,7 @@
 /*   By: badam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 21:34:43 by badam             #+#    #+#             */
-/*   Updated: 2019/11/07 17:42:13 by badam            ###   ########.fr       */
+/*   Updated: 2019/11/07 17:44:04 by badam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ int	main(int argc, char **argv)
 	memset(memdst, 'x', MEMLEN);
 	memcpy(ft_memdst,	argv[1], strlen(argv[1]) + 1);
 	memcpy(memdst,		argv[1], strlen(argv[1]) + 1);
-	strlcat(	ft_memdst,	argv[2], atoi(argv[3]));
+	ft_strlcat(	ft_memdst,	argv[2], atoi(argv[3]));
 	strlcat(	memdst,	argv[2], atoi(argv[3]));
 	diff = memcmp(ft_memdst, memdst, MEMLEN);
 	free(ft_memdst);
