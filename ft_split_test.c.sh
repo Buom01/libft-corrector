@@ -6,7 +6,7 @@
 #    By: badam <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/05 22:12:05 by badam             #+#    #+#              #
-#    Updated: 2019/11/06 21:20:41 by badam            ###   ########.fr        #
+#    Updated: 2019/11/09 19:17:19 by badam            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,3 +25,4 @@
 ./ft_split_test.c.out "eee" "e" && OK || KO
 ./ft_split_test.c.out "ee" "e" && OK || KO
 ./ft_split_test.c.out "e" "e" && OK || KO
+./ft_split_test.c.out "                  olol" " " "olol" && OK || KO
