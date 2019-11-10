@@ -6,7 +6,7 @@
 /*   By: badam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 21:34:43 by badam             #+#    #+#             */
-/*   Updated: 2019/11/07 21:03:23 by badam            ###   ########.fr       */
+/*   Updated: 2019/11/10 19:36:49 by badam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int	main(int argc, char **argv)
 	l = atoi(argv[3]);
 	rslt = strlcat(memdst, argv[2], l);
 	ft_rslt = ft_strlcat(ft_memdst, argv[2], l);
-	// printf("\n%s:%s ; %zu:%zu", ft_memdst, memdst, ft_rslt, rslt);
+	//printf("\n%s:%s ; %zu:%zu", ft_memdst, memdst, ft_rslt, rslt);
 	if (memcmp(ft_memdst, memdst, MEMLEN) != 0 || rslt != ft_rslt)
 		return (1);
 	return (0);

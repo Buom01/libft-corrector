@@ -6,7 +6,7 @@
 /*   By: badam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 21:34:43 by badam             #+#    #+#             */
-/*   Updated: 2019/11/09 21:09:17 by badam            ###   ########.fr       */
+/*   Updated: 2019/11/10 19:34:39 by badam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,10 +33,21 @@ int	main()
 	memcpy(memdst, mem, strlen(mem) + 1 );
 	memcpy(ft_memdst, mem, strlen(mem) + 1 );
 	l = strlen(str) + 4;
-	rslt = strlcat(memdst, str, l);
 	ft_rslt = ft_strlcat(ft_memdst, str, l);
-	printf("\n%s:%s ; %zu:%zu", ft_memdst, memdst, ft_rslt, rslt);
-	if (memcmp(ft_memdst, memdst, MEMLEN) != 0 || rslt != ft_rslt)
+	rslt = strlcat(memdst, str, l);
+	/*
+	write(0, "\n", 1);
+	write(0, ft_memdst, MEMLEN);
+	write(0, ":", 1);
+	write(0, memdst, MEMLEN);
+	write(0, " ; ", 3);
+	char *ft_len = ft_itoa(ft_rslt);
+	char *len = ft_itoa(rslt);
+	write(0, ft_len, strlen(ft_len));
+	write(0, ":", 1);
+	write(0, len, strlen(len));
+	*/
+	if (memcmp(ft_memdst, memdst, MEMLEN ) != 0 || rslt != ft_rslt)
 		return (1);
 	return (0);
 }
