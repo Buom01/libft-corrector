@@ -1,39 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_split_test.c                                    :+:      :+:    :+:   */
+/*   ft_substr_test.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: badam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 22:26:20 by badam             #+#    #+#             */
-/*   Updated: 2019/11/12 20:00:32 by badam            ###   ########.fr       */
+/*   Updated: 2019/11/12 19:48:41 by badam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "string.h"
 #include "libft.h"
-#include "unistd.h"
+#include "stdlib.h"
+#include "stdio.h"
 
 int	main(int argc, char **argv)
 {
-	char		c;
-	const char	*s;
-	char		**rslt;
-	char		**refrslt;
+	const char		*str;
+	char			*rslt;
+	char			*refrslt;
+	unsigned int	start;
+	size_t			len;
 
-	if (argc < 3)
+	if (argc < 5)
 		return (1);
-	c = (int)(argv[2][0]);
-	s = argv[1];
-	rslt = ft_split((const char*)s, (char)c);
-	refrslt = argv + 3;
-	while ((rslt) && (refrslt && *refrslt))
-	{
-		if (strcmp(*(refrslt++), *(rslt++)) != 0)
-			return (1);
-	}
-	if (((rslt && *rslt) && !(refrslt && *refrslt))
-			|| (!(rslt && *rslt) && (refrslt && *refrslt)))
+	str = argv[1];
+	start = atoi(argv[2]);
+	len = atoi(argv[3]);
+	rslt = ft_substr(str, start, len);
+	refrslt = argv[4];
+	//printf("\n%s:%s", rslt, refrslt);
+	if (strcmp(refrslt, rslt) != 0)
 		return (1);
 	return (0);
 }

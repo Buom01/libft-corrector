@@ -1,23 +1,19 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    ft_memchr_test.c.sh                                :+:      :+:    :+:    #
+#    ft_substr_test.c.sh                                :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: badam <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/11/05 22:12:05 by badam             #+#    #+#              #
-#    Updated: 2019/11/12 19:09:35 by badam            ###   ########.fr        #
+#    Updated: 2019/11/12 19:32:36 by badam            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 #/bin/sh
-./ft_memchr_test.c.out "qwertyuiop" "t" "10"  && OK || KO
-./ft_memchr_test.c.out "qwertyuiop" "" "11"  && OK || KO
-./ft_memchr_test.c.out "qwertyuiop" "a" "11"  && OK || KO
-./ft_memchr_test.c.out "qwertyuiop" "p" "11"  && OK || KO
-./ft_memchr_test.c.out "qwertyuiop" "p" "10"  && OK || KO
-./ft_memchr_test.c.out "qwertyuiop" "p" "9"  && OK || KO
-./ft_memchr_test.c.out "qwertyuiop" "q" "2"  && OK || KO
-./ft_memchr_test.c.out "qwertyuiop" "q" "1"  && OK || KO
-./ft_memchr_test.c.out "qwertyuiop" "q" "0"  && OK || KO
-./ft_memchr_test.c.out "z" "a" "50" && OK || KO
+./ft_substr_test.c.out "qwerty" "0" "6" "qwerty" && OK || KO
+./ft_substr_test.c.out "qwerty" "0" "9" "qwerty" && OK || KO
+./ft_substr_test.c.out "qwerty" "1" "9" "werty" && OK || KO
+./ft_substr_test.c.out "qwerty" "0" "1" "q" && OK || KO
+./ft_substr_test.c.out "qwerty" "1" "1" "w" && OK || KO
+./ft_substr_test.c.out "qwerty" "400" "20" "" && OK || KO
