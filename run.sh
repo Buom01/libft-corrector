@@ -38,7 +38,7 @@ printf "\n\n"
 for test in $TESTFILES
 do
 	printf "$test : "
-	sh -c "clang -Wall -Wextra -Werror -g3 -fsanitize=address -I $LIBFT_PATH $test $LIBFT_PATH*.o -o $test.out" &>/dev/null
+	sh -c "clang -g3 -fsanitize=address -Wall -Wextra -Werror -I $LIBFT_PATH $test $LIBFT_PATH*.o -o $test.out" &>/dev/null # Shut up
 	if [[ -f $test.out ]]; then
 		if [[ -f $test.sh ]]; then
 			./$test.sh 2> /dev/null  # Move out errors

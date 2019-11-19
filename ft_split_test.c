@@ -6,13 +6,14 @@
 /*   By: badam <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/05 22:26:20 by badam             #+#    #+#             */
-/*   Updated: 2019/11/12 20:00:32 by badam            ###   ########.fr       */
+/*   Updated: 2019/11/14 05:13:41 by badam            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "string.h"
 #include "libft.h"
 #include "unistd.h"
+#include "stdio.h"
 
 int	main(int argc, char **argv)
 {
@@ -29,6 +30,7 @@ int	main(int argc, char **argv)
 	refrslt = argv + 3;
 	while ((rslt) && (refrslt && *refrslt))
 	{
+		//printf("\n%s:%s", *rslt, *refrslt);
 		if (strcmp(*(refrslt++), *(rslt++)) != 0)
 			return (1);
 	}
